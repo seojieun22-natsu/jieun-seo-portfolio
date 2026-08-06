@@ -42,16 +42,16 @@ export default function Home() {
               기획부터 현장 운영, 데이터 분석까지 전 과정을 직접 담당했습니다.
             </p>
             <p className="text-[#555555] leading-relaxed">
-              BTS 팬덤 커뮤니티에서 쌓은 K-POP 인사이트와 실무 운영 경험을 바탕으로,
-              아티스트와 팬이 만나는 최고의 오프라인 경험을 만들고 싶습니다.
+              IP 라이선스 팝업부터 자체 브랜드 기획까지, 공간을 통해 브랜드와 사람이 연결되는
+              경험을 만드는 것에 관심이 많습니다.
             </p>
             <div className="mt-8 grid grid-cols-2 md:grid-cols-3 gap-4">
               {[
                 { label: "현직", value: "MD / Retail Manager" },
                 { label: "소속", value: "IdeaPLAB (SMORE)" },
                 { label: "운영 매장", value: "상설 2 + 팝업 다수" },
-                { label: "K-POP", value: "BTS ARMY" },
-                { label: "트위터", value: "1.5M 팔로워" },
+                { label: "전문 분야", value: "IP 팝업 · 리테일 기획" },
+                { label: "도구", value: "Power BI · ERP · AI 자동화" },
                 { label: "위치", value: "Seoul, Korea" },
               ].map((item) => (
                 <div key={item.label} className="border border-[#e5e5e5] rounded-lg p-4">
@@ -100,7 +100,7 @@ export default function Home() {
                   tags: ["VMD", "매뉴얼 작성", "복합 기획"],
                 },
                 {
-                  title: "쿠키런킹덤 팝업",
+                  title: "쿠키런 〈쿠키앤모어〉 팝업",
                   sub: "롯데월드몰 · 2026.05",
                   desc: "데브시스터즈 IP 팝업. 운영안 수립부터 재고 시스템 세팅, 매출 정산까지 전 과정 담당. 실시간 품절현황 공유 페이지 직접 제작(Next.js + Supabase).",
                   tags: ["운영 기획", "재고 시스템", "매출 정산"],
@@ -288,12 +288,6 @@ export default function Home() {
                   title: "Smore 상품 매뉴얼 사이트",
                   period: "2026",
                   desc: "매장 운영 가이드, 클레임 대응 매뉴얼을 웹사이트로 구축. Next.js + Vercel 배포. 비개발자가 직접 기획·내용을 총괄.",
-                  highlight: false,
-                },
-                {
-                  title: "팬덤 SNS 계정 운영",
-                  period: "2019 — 현재",
-                  desc: "BTS 팬 트위터 계정 1.5M 팔로워 보유. 콘텐츠 기획, 팬덤 커뮤니케이션, 트렌드 분석을 통한 K-POP 인사이트 축적.",
                   highlight: false,
                 },
               ].map((item) => (
