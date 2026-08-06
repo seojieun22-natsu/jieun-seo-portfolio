@@ -1,10 +1,10 @@
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#0a0a0a] text-[#f5f5f5]">
+    <main className="min-h-screen bg-[#f9f9f7] text-[#0a0a0a]">
       {/* Nav */}
-      <nav className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-8 py-5 bg-[#0a0a0a]/90 backdrop-blur-sm border-b border-[#262626]">
+      <nav className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-8 py-5 bg-[#f9f9f7]/90 backdrop-blur-sm border-b border-[#e5e5e5]">
         <span className="font-mono text-sm text-[#f97316]">JIEUN SEO</span>
-        <span className="font-mono text-xs text-[#404040]">MD · RETAIL · EVENTS</span>
+        <span className="font-mono text-xs text-[#888888]">MD · RETAIL · EVENTS</span>
       </nav>
 
       {/* Hero */}
@@ -13,35 +13,35 @@ export default function Home() {
         <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-8">
           Jieun Seo
         </h1>
-        <p className="text-xl md:text-2xl text-[#a0a0a0] max-w-2xl leading-relaxed">
+        <p className="text-xl md:text-2xl text-[#555555] max-w-2xl leading-relaxed">
           오프라인 경험을 기획하고, 데이터로 운영하며,<br />
           사람들이 기억하는 순간을 만듭니다.
         </p>
         <div className="mt-12 flex gap-3 flex-wrap">
           <span className="px-4 py-2 border border-[#f97316] text-[#f97316] text-sm font-mono rounded-full">Retail Operations</span>
-          <span className="px-4 py-2 border border-[#404040] text-[#a0a0a0] text-sm font-mono rounded-full">Event Planning</span>
-          <span className="px-4 py-2 border border-[#404040] text-[#a0a0a0] text-sm font-mono rounded-full">Data Analytics</span>
-          <span className="px-4 py-2 border border-[#404040] text-[#a0a0a0] text-sm font-mono rounded-full">AI Workflow</span>
+          <span className="px-4 py-2 border border-[#404040] text-[#555555] text-sm font-mono rounded-full">Event Planning</span>
+          <span className="px-4 py-2 border border-[#404040] text-[#555555] text-sm font-mono rounded-full">Data Analytics</span>
+          <span className="px-4 py-2 border border-[#404040] text-[#555555] text-sm font-mono rounded-full">AI Workflow</span>
         </div>
       </section>
 
-      <div className="border-t border-[#262626]" />
+      <div className="border-t border-[#e5e5e5]" />
 
       {/* 01 나는 누구인가 */}
       <section className="py-24 px-8 md:px-16 max-w-5xl mx-auto">
         <div className="flex gap-8 md:gap-16 flex-col md:flex-row">
           <div className="md:w-48 shrink-0">
             <p className="font-mono text-[#f97316] text-xs tracking-widest">01</p>
-            <p className="font-mono text-[#404040] text-xs mt-1">About</p>
+            <p className="font-mono text-[#888888] text-xs mt-1">About</p>
           </div>
           <div className="flex-1">
             <h2 className="text-2xl font-bold mb-6">나는 누구인가</h2>
-            <p className="text-[#a0a0a0] leading-relaxed mb-6">
+            <p className="text-[#555555] leading-relaxed mb-6">
               저는 오프라인 공간에서 브랜드 경험을 기획하고 운영하는 MD·리테일 매니저입니다.
               아이디어플랩(SMORE)에서 상설 매장 2곳과 다수의 팝업스토어를 운영하며,
               기획부터 현장 운영, 데이터 분석까지 전 과정을 직접 담당했습니다.
             </p>
-            <p className="text-[#a0a0a0] leading-relaxed">
+            <p className="text-[#555555] leading-relaxed">
               BTS 팬덤 커뮤니티에서 쌓은 K-POP 인사이트와 실무 운영 경험을 바탕으로,
               아티스트와 팬이 만나는 최고의 오프라인 경험을 만들고 싶습니다.
             </p>
@@ -54,8 +54,8 @@ export default function Home() {
                 { label: "트위터", value: "1.5M 팔로워" },
                 { label: "위치", value: "Seoul, Korea" },
               ].map((item) => (
-                <div key={item.label} className="border border-[#262626] rounded-lg p-4">
-                  <p className="text-[#404040] text-xs font-mono mb-1">{item.label}</p>
+                <div key={item.label} className="border border-[#e5e5e5] rounded-lg p-4">
+                  <p className="text-[#888888] text-xs font-mono mb-1">{item.label}</p>
                   <p className="text-sm font-medium">{item.value}</p>
                 </div>
               ))}
@@ -64,18 +64,18 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="border-t border-[#262626]" />
+      <div className="border-t border-[#e5e5e5]" />
 
       {/* 02 기획력 */}
       <section className="py-24 px-8 md:px-16 max-w-5xl mx-auto">
         <div className="flex gap-8 md:gap-16 flex-col md:flex-row">
           <div className="md:w-48 shrink-0">
             <p className="font-mono text-[#f97316] text-xs tracking-widest">02</p>
-            <p className="font-mono text-[#404040] text-xs mt-1">Planning</p>
+            <p className="font-mono text-[#888888] text-xs mt-1">Planning</p>
           </div>
           <div className="flex-1">
             <h2 className="text-2xl font-bold mb-6">이벤트 기획</h2>
-            <p className="text-[#a0a0a0] leading-relaxed mb-8">
+            <p className="text-[#555555] leading-relaxed mb-8">
               IP 라이선스 팝업부터 브랜드 체험 이벤트까지, 컨셉 기획·예산 운영·현장 총괄의
               전 사이클을 책임지며 운영했습니다.
             </p>
@@ -100,21 +100,27 @@ export default function Home() {
                   tags: ["VMD", "매뉴얼 작성", "복합 기획"],
                 },
                 {
+                  title: "쿠키런킹덤 팝업",
+                  sub: "롯데월드몰 · 2026.05",
+                  desc: "데브시스터즈 IP 팝업. 운영안 수립부터 재고 시스템 세팅, 매출 정산까지 전 과정 담당. 실시간 품절현황 공유 페이지 직접 제작(Next.js + Supabase).",
+                  tags: ["운영 기획", "재고 시스템", "매출 정산"],
+                },
+                {
                   title: "순환 팝업 운영 체계",
                   sub: "연간 기획",
                   desc: "팝업스토어 기획·운영 표준화. 체크리스트, 매뉴얼, 데이터 추적 시스템을 내재화해 반복 가능한 구조로 만듦.",
                   tags: ["프로세스 설계", "표준화", "매뉴얼"],
                 },
               ].map((item) => (
-                <div key={item.title} className="border border-[#262626] rounded-xl p-6 hover:border-[#f97316]/50 transition-colors">
+                <div key={item.title} className="border border-[#e5e5e5] rounded-xl p-6 hover:border-[#f97316]/50 transition-colors">
                   <div className="flex justify-between items-start mb-3">
                     <h3 className="font-bold">{item.title}</h3>
-                    <span className="text-xs text-[#404040] font-mono shrink-0 ml-2">{item.sub}</span>
+                    <span className="text-xs text-[#888888] font-mono shrink-0 ml-2">{item.sub}</span>
                   </div>
-                  <p className="text-[#a0a0a0] text-sm leading-relaxed mb-4">{item.desc}</p>
+                  <p className="text-[#555555] text-sm leading-relaxed mb-4">{item.desc}</p>
                   <div className="flex gap-2 flex-wrap">
                     {item.tags.map((tag) => (
-                      <span key={tag} className="text-xs px-2 py-1 bg-[#1a1a1a] text-[#404040] rounded font-mono">{tag}</span>
+                      <span key={tag} className="text-xs px-2 py-1 bg-[#efefed] text-[#888888] rounded font-mono">{tag}</span>
                     ))}
                   </div>
                 </div>
@@ -124,18 +130,18 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="border-t border-[#262626]" />
+      <div className="border-t border-[#e5e5e5]" />
 
       {/* 03 리테일 운영 */}
       <section className="py-24 px-8 md:px-16 max-w-5xl mx-auto">
         <div className="flex gap-8 md:gap-16 flex-col md:flex-row">
           <div className="md:w-48 shrink-0">
             <p className="font-mono text-[#f97316] text-xs tracking-widest">03</p>
-            <p className="font-mono text-[#404040] text-xs mt-1">Operations</p>
+            <p className="font-mono text-[#888888] text-xs mt-1">Operations</p>
           </div>
           <div className="flex-1">
             <h2 className="text-2xl font-bold mb-6">리테일 운영</h2>
-            <p className="text-[#a0a0a0] leading-relaxed mb-8">
+            <p className="text-[#555555] leading-relaxed mb-8">
               상설 매장 2곳(삼청·행궁)의 일상 운영과 데이터 기반 의사결정을 담당합니다.
               사람에 의존하는 구조를 시스템으로 전환하는 것이 핵심 목표입니다.
             </p>
@@ -145,9 +151,9 @@ export default function Home() {
                 { num: "3+", label: "팝업 운영 경험" },
                 { num: "매일", label: "매출 데이터 수집·분석" },
               ].map((stat) => (
-                <div key={stat.label} className="border border-[#262626] rounded-xl p-6 text-center">
+                <div key={stat.label} className="border border-[#e5e5e5] rounded-xl p-6 text-center">
                   <p className="text-3xl font-bold text-[#f97316] mb-2">{stat.num}</p>
-                  <p className="text-sm text-[#a0a0a0]">{stat.label}</p>
+                  <p className="text-sm text-[#555555]">{stat.label}</p>
                 </div>
               ))}
             </div>
@@ -161,7 +167,7 @@ export default function Home() {
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3">
                   <span className="text-[#f97316] mt-1">→</span>
-                  <p className="text-[#a0a0a0] text-sm">{item}</p>
+                  <p className="text-[#555555] text-sm">{item}</p>
                 </div>
               ))}
             </div>
@@ -169,18 +175,18 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="border-t border-[#262626]" />
+      <div className="border-t border-[#e5e5e5]" />
 
       {/* 04 데이터 */}
       <section className="py-24 px-8 md:px-16 max-w-5xl mx-auto">
         <div className="flex gap-8 md:gap-16 flex-col md:flex-row">
           <div className="md:w-48 shrink-0">
             <p className="font-mono text-[#f97316] text-xs tracking-widest">04</p>
-            <p className="font-mono text-[#404040] text-xs mt-1">Data</p>
+            <p className="font-mono text-[#888888] text-xs mt-1">Data</p>
           </div>
           <div className="flex-1">
             <h2 className="text-2xl font-bold mb-6">데이터 & 분석</h2>
-            <p className="text-[#a0a0a0] leading-relaxed mb-8">
+            <p className="text-[#555555] leading-relaxed mb-8">
               감이 아닌 숫자로 의사결정합니다. 매출·재고·방문 데이터를 직접 수집하고
               대시보드로 시각화해 팀과 경영진이 빠르게 판단할 수 있도록 만듭니다.
             </p>
@@ -207,10 +213,10 @@ export default function Home() {
                   icon: "📋",
                 },
               ].map((item) => (
-                <div key={item.title} className="border border-[#262626] rounded-xl p-6 hover:border-[#f97316]/50 transition-colors">
+                <div key={item.title} className="border border-[#e5e5e5] rounded-xl p-6 hover:border-[#f97316]/50 transition-colors">
                   <span className="text-2xl mb-4 block">{item.icon}</span>
                   <h3 className="font-bold mb-2">{item.title}</h3>
-                  <p className="text-[#a0a0a0] text-sm leading-relaxed">{item.desc}</p>
+                  <p className="text-[#555555] text-sm leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -218,23 +224,23 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="border-t border-[#262626]" />
+      <div className="border-t border-[#e5e5e5]" />
 
       {/* 05 AI 활용 */}
       <section className="py-24 px-8 md:px-16 max-w-5xl mx-auto">
         <div className="flex gap-8 md:gap-16 flex-col md:flex-row">
           <div className="md:w-48 shrink-0">
             <p className="font-mono text-[#f97316] text-xs tracking-widest">05</p>
-            <p className="font-mono text-[#404040] text-xs mt-1">AI</p>
+            <p className="font-mono text-[#888888] text-xs mt-1">AI</p>
           </div>
           <div className="flex-1">
             <h2 className="text-2xl font-bold mb-6">AI 워크플로우</h2>
-            <p className="text-[#a0a0a0] leading-relaxed mb-8">
+            <p className="text-[#555555] leading-relaxed mb-8">
               비개발자이지만 AI 에이전트를 직접 운영하며 업무를 자동화합니다.
               반복 업무를 시스템화해 중요한 일에 집중하는 구조를 만드는 데 관심이 많습니다.
             </p>
-            <div className="bg-[#111111] border border-[#262626] rounded-xl p-6 font-mono text-sm">
-              <p className="text-[#404040] mb-4"># 자동화된 업무 목록</p>
+            <div className="bg-[#f0f0ee] border border-[#e5e5e5] rounded-xl p-6 font-mono text-sm">
+              <p className="text-[#aaaaaa] mb-4"># 자동화된 업무 목록</p>
               {[
                 "매일 21:10 → 5개 매출원 자동 수집 + DB 저장",
                 "매일 08:00 → 오늘 할 일 아침 브리핑 자동 생성",
@@ -245,7 +251,7 @@ export default function Home() {
               ].map((item) => (
                 <div key={item} className="flex gap-3 mb-2">
                   <span className="text-[#f97316]">$</span>
-                  <span className="text-[#a0a0a0]">{item}</span>
+                  <span className="text-[#555555]">{item}</span>
                 </div>
               ))}
             </div>
@@ -253,14 +259,14 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="border-t border-[#262626]" />
+      <div className="border-t border-[#e5e5e5]" />
 
       {/* 06 주요 프로젝트 */}
       <section className="py-24 px-8 md:px-16 max-w-5xl mx-auto">
         <div className="flex gap-8 md:gap-16 flex-col md:flex-row">
           <div className="md:w-48 shrink-0">
             <p className="font-mono text-[#f97316] text-xs tracking-widest">06</p>
-            <p className="font-mono text-[#404040] text-xs mt-1">Projects</p>
+            <p className="font-mono text-[#888888] text-xs mt-1">Projects</p>
           </div>
           <div className="flex-1">
             <h2 className="text-2xl font-bold mb-6">주요 프로젝트</h2>
@@ -293,13 +299,13 @@ export default function Home() {
               ].map((item) => (
                 <div
                   key={item.title}
-                  className={`border rounded-xl p-6 ${item.highlight ? "border-[#f97316]/50 bg-[#f97316]/5" : "border-[#262626]"}`}
+                  className={`border rounded-xl p-6 ${item.highlight ? "border-[#f97316]/50 bg-[#f97316]/5" : "border-[#e5e5e5]"}`}
                 >
                   <div className="flex justify-between items-start mb-3">
                     <h3 className="font-bold">{item.title}</h3>
-                    <span className="text-xs text-[#404040] font-mono shrink-0 ml-4">{item.period}</span>
+                    <span className="text-xs text-[#888888] font-mono shrink-0 ml-4">{item.period}</span>
                   </div>
-                  <p className="text-[#a0a0a0] text-sm leading-relaxed">{item.desc}</p>
+                  <p className="text-[#555555] text-sm leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -308,13 +314,13 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-[#262626] py-12 px-8 md:px-16 max-w-5xl mx-auto">
+      <footer className="border-t border-[#e5e5e5] py-12 px-8 md:px-16 max-w-5xl mx-auto">
         <div className="flex justify-between items-center flex-wrap gap-4">
           <div>
             <p className="font-mono text-[#f97316] text-sm">JIEUN SEO</p>
-            <p className="text-[#404040] text-xs mt-1">seojieun22@gmail.com</p>
+            <p className="text-[#888888] text-xs mt-1">seojieun22@gmail.com</p>
           </div>
-          <p className="font-mono text-xs text-[#404040]">© 2026</p>
+          <p className="font-mono text-xs text-[#888888]">© 2026</p>
         </div>
       </footer>
     </main>
