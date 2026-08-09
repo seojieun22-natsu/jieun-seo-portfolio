@@ -76,6 +76,45 @@
   transform: translateY(-3px);
 }
 
+/* Ticket stack */
+.ticket {
+  position: relative;
+  background: #161616;
+  border: 1px solid #403f3f;
+  border-left: 4px solid var(--fc, #fffdf9);
+  border-radius: 12px;
+  transform: rotate(var(--rot, 0deg));
+  margin-top: -6px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.ticket:first-child { margin-top: 0; }
+.ticket:hover {
+  transform: rotate(0deg) translateY(-5px) scale(1.03);
+  border-color: var(--fc, #fffdf9);
+  box-shadow: 0 8px 28px 0 color-mix(in srgb, var(--fc, #fffdf9) 30%, transparent);
+  z-index: 10;
+}
+.ticket-stub {
+  border-left: 2px dashed #403f3f;
+  position: relative;
+}
+.ticket-stub::before,
+.ticket-stub::after {
+  content: "";
+  position: absolute;
+  left: -8px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #101010;
+}
+.ticket-stub::before { top: -8px; }
+.ticket-stub::after { bottom: -8px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ticket, .ticket:hover { transform: none; transition: none; }
+}
+
 /* Card hover photo reveal */
 .card-photo {
   position: relative;

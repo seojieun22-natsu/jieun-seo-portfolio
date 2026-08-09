@@ -154,28 +154,33 @@ export default function HybePortfolio() {
               </p>
             </div>
 
-            {/* 시선 전환 다이어그램 */}
-            <div className="flex flex-col items-center">
+            {/* 티켓 스택 */}
+            <div className="flex flex-col items-center gap-0 py-4">
               {[
-                { emoji: "🎤", t: "관객", d: "무대 아래에서 보고, 느끼고, 분석하고", color: "#2ad5ff", delay: 0 },
-                { emoji: "🏟️", t: "스태프", d: "현장 안에서 규모별 운영을 몸으로 배우고", color: "#ffb02a", delay: 1.3 },
-                { emoji: "📋", t: "운영 총괄", d: "이제는 그 경험을 설계하는 사람으로", color: "#b02aff", delay: 2.6 },
-              ].map((n, i) => (
-                <div key={n.t} className="flex flex-col items-center w-full max-w-sm">
-                  {i > 0 && (
-                    <div className="flex flex-col items-center py-1">
-                      <div className="w-px h-7 bg-[#403f3f]" />
-                      <span className="text-[#6f879c] text-xs my-1">▼</span>
-                      <div className="w-px h-7 bg-[#403f3f]" />
+                { emoji: "💜", t: "아이돌 콘서트", d: "잠실 · 고척 · 월드투어 다수", type: "AUDIENCE", color: "#b02aff", rot: -2 },
+                { emoji: "🎸", t: "밴드 · 록 콘서트", d: "홀 공연부터 스타디움까지", type: "AUDIENCE", color: "#2ad5ff", rot: 1.5 },
+                { emoji: "🎪", t: "뮤직 페스티벌", d: "사운드베리 외 다수 관람", type: "AUDIENCE", color: "#2aff2a", rot: -1 },
+                { emoji: "🏃", t: "유아차런 마라톤", d: "잠실 · 서울 — 현장 운영", type: "STAFF", color: "#ffb02a", rot: 2 },
+                { emoji: "⚽", t: "FC서울 홈경기 ×2", d: "수만 명 규모 관중 운영", type: "STAFF", color: "#ff2a2a", rot: -1.5 },
+                { emoji: "🌉", t: "잠수교 뚜벅뚜벅 축제", d: "야외 축제 현장 운영", type: "STAFF", color: "#2a7fff", rot: 1 },
+                { emoji: "🌳", t: "분당 파크콘서트", d: "공원 공연 현장 운영", type: "STAFF", color: "#ff2a7f", rot: -0.5 },
+              ].map((tk) => (
+                <div
+                  key={tk.t}
+                  className="ticket w-full max-w-md flex items-stretch"
+                  style={{ "--fc": tk.color, "--rot": `${tk.rot}deg` } as React.CSSProperties}
+                >
+                  <div className="flex-1 flex items-center gap-4 px-5 py-4">
+                    <span className="text-2xl">{tk.emoji}</span>
+                    <div>
+                      <p className="text-base font-semibold leading-snug">{tk.t}</p>
+                      <p className="text-sm text-[#aebcca] mt-0.5">{tk.d}</p>
                     </div>
-                  )}
-                  <div
-                    className="flow-step rounded-[10px] bg-[#101010] px-6 py-5 w-full text-center"
-                    style={{ "--fc": n.color, animationDelay: `${n.delay}s` } as React.CSSProperties}
-                  >
-                    <p className="text-2xl mb-2">{n.emoji}</p>
-                    <p className="text-lg font-semibold mb-1">{n.t}</p>
-                    <p className="text-sm text-[#aebcca] leading-[1.7]">{n.d}</p>
+                  </div>
+                  <div className="ticket-stub flex items-center px-4">
+                    <span className="text-[11px] font-semibold tracking-[0.15em]" style={{ color: tk.color }}>
+                      {tk.type}
+                    </span>
                   </div>
                 </div>
               ))}
