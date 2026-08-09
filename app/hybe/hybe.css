@@ -1,0 +1,48 @@
+/* ===== HYBE page animations ===== */
+
+/* Hero load-in */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: none; }
+}
+.hero-fade-1 { animation: heroFadeUp 0.9s ease 0.1s both; }
+.hero-fade-2 { animation: heroFadeUp 0.9s ease 0.3s both; }
+.hero-fade-3 { animation: heroFadeUp 0.9s ease 0.5s both; }
+.hero-fade-4 { animation: heroFadeUp 0.9s ease 0.7s both; }
+
+/* Prism line shimmer */
+.prism-anim {
+  background-size: 200% 100%;
+  animation: prismShift 3.5s linear infinite;
+}
+@keyframes prismShift {
+  0% { background-position: 0% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Scroll reveal — only when JS is ready (no-JS keeps content visible) */
+.reveal-ready .reveal-item {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.reveal-ready .reveal-item.reveal-on {
+  opacity: 1;
+  transform: none;
+}
+
+/* Card hover */
+.card-hover {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.card-hover:hover {
+  background-color: #181818;
+  transform: translateY(-3px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-fade-1, .hero-fade-2, .hero-fade-3, .hero-fade-4 { animation: none; }
+  .prism-anim { animation: none; }
+  .reveal-ready .reveal-item { opacity: 1; transform: none; transition: none; }
+  .card-hover, .card-hover:hover { transform: none; }
+}

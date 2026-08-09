@@ -1,4 +1,6 @@
 import { Noto_Sans_KR } from "next/font/google";
+import RevealInit from "./reveal-init";
+import "./hybe.css";
 
 const notoSansKr = Noto_Sans_KR({
   subsets: ["latin"],
@@ -6,5 +8,10 @@ const notoSansKr = Noto_Sans_KR({
 });
 
 export default function HybeLayout({ children }: { children: React.ReactNode }) {
-  return <div className={notoSansKr.className}>{children}</div>;
+  return (
+    <div className={notoSansKr.className}>
+      <RevealInit />
+      {children}
+    </div>
+  );
 }

@@ -17,26 +17,26 @@ export default function HybePortfolio() {
       {/* Hero */}
       <section className="w-full min-h-screen flex flex-col justify-center px-8 md:px-16 pt-32 pb-24">
         <div className="max-w-[1440px] mx-auto w-full text-center">
-          <p className="text-xs text-[#6f879c] tracking-[0.02em] uppercase mb-10">Portfolio · Seo Jieun · 2026</p>
-          <h1 className="font-normal text-5xl md:text-8xl leading-[1.18] tracking-[-0.02em] mb-2">
+          <p className="hero-fade-1 text-xs text-[#6f879c] tracking-[0.02em] uppercase mb-10">Portfolio · Seo Jieun · 2026</p>
+          <h1 className="hero-fade-2 font-normal text-5xl md:text-8xl leading-[1.18] tracking-[-0.02em] mb-2">
             기획이 현장에서
           </h1>
           <h1
-            className="font-normal text-5xl md:text-8xl leading-[1.18] tracking-[-0.02em] mb-10"
+            className="hero-fade-2 font-normal text-5xl md:text-8xl leading-[1.18] tracking-[-0.02em] mb-10"
             style={{ textShadow: "-3px 0 rgba(255,42,42,0.55), 3px 0 rgba(42,127,255,0.55)" }}
           >
             완성되는 순간
           </h1>
           {/* Prism artifact — the only chromatic element */}
-          <div className="flex justify-center mb-12">
-            <div className="h-[3px] w-48 bg-gradient-to-r from-[#ff2a2a] via-[#2aff2a] to-[#2a7fff] opacity-80" />
+          <div className="hero-fade-3 flex justify-center mb-12">
+            <div className="prism-anim h-[3px] w-48 bg-gradient-to-r from-[#ff2a2a] via-[#2aff2a] to-[#2a7fff] opacity-80" />
           </div>
-          <p className="text-lg md:text-xl text-[#6f879c] leading-[1.8] max-w-2xl mx-auto">
+          <p className="hero-fade-3 text-lg md:text-xl text-[#6f879c] leading-[1.8] max-w-2xl mx-auto">
             IP의 세계관을 공간과 경험으로 구현해온 이벤트 기획자입니다.<br />
             컨셉 기획부터 예산 운영, 현장 총괄까지 — 전 사이클을 책임집니다.
           </p>
 
-          <div className="grid grid-cols-3 gap-px bg-[#403f3f] border border-[#403f3f] mt-20 max-w-3xl mx-auto">
+          <div className="hero-fade-4 grid grid-cols-3 gap-px bg-[#403f3f] border border-[#403f3f] mt-20 max-w-3xl mx-auto">
             {[
               { num: "6+", label: "IP 팝업 기획·운영" },
               { num: "10년+", label: "리테일 · 이벤트 현장" },
@@ -53,7 +53,7 @@ export default function HybePortfolio() {
 
       {/* 01 Event Planning */}
       <section className="w-full py-28 px-8 md:px-16 border-t border-[#403f3f]">
-        <div className="max-w-[1440px] mx-auto">
+        <div className="max-w-[1440px] mx-auto reveal-item">
           <p className="text-xs text-[#6f879c] tracking-[0.02em] uppercase mb-3">01 — Event Planning</p>
           <h2 className="text-4xl md:text-6xl font-normal leading-[1.25] tracking-[-0.01em] mb-8">
             IP 라이선스 팝업,<br />기획부터 현장까지
@@ -112,7 +112,7 @@ export default function HybePortfolio() {
                 tag: "굿즈 기획 · 소싱 · 사업화",
               },
             ].map((p) => (
-              <div key={p.title} className="bg-[#101010] p-8 md:p-10">
+              <div key={p.title} className="card-hover bg-[#101010] p-8 md:p-10">
                 <p className="text-2xl mb-4">{p.emoji}</p>
                 <h3 className="text-xl md:text-2xl font-medium leading-[1.4] mb-4">{p.title}</h3>
                 <p className="text-sm text-[#6f879c] leading-[1.8] mb-5">{p.desc}</p>
@@ -125,7 +125,7 @@ export default function HybePortfolio() {
 
       {/* 02 On-site */}
       <section className="w-full py-28 px-8 md:px-16 border-t border-[#403f3f]">
-        <div className="max-w-[1440px] mx-auto">
+        <div className="max-w-[1440px] mx-auto reveal-item">
           <p className="text-xs text-[#6f879c] tracking-[0.02em] uppercase mb-3">02 — On-site Experience</p>
           <h2 className="text-4xl md:text-6xl font-normal leading-[1.25] tracking-[-0.01em] mb-8">
             관객의 눈,<br />운영자의 몸
@@ -154,7 +154,7 @@ export default function HybePortfolio() {
                 desc: "IP 팝업 현장의 인력 배치, 관객 동선, 재고·정산, 돌발 상황 대응까지 직접 총괄. 기획 의도가 관객 경험까지 끊기지 않게 만드는 것이 저의 일입니다.",
               },
             ].map((c) => (
-              <div key={c.title} className="bg-[#101010] p-8 md:p-10">
+              <div key={c.title} className="card-hover bg-[#101010] p-8 md:p-10">
                 <p className="text-2xl mb-4">{c.emoji}</p>
                 <h3 className="text-xl md:text-2xl font-medium leading-[1.4] mb-4">{c.title}</h3>
                 <p className="text-sm text-[#6f879c] leading-[1.8]">{c.desc}</p>
@@ -166,7 +166,7 @@ export default function HybePortfolio() {
 
       {/* 03 Numbers */}
       <section className="w-full py-28 px-8 md:px-16 border-t border-[#403f3f]">
-        <div className="max-w-[1440px] mx-auto">
+        <div className="max-w-[1440px] mx-auto reveal-item">
           <p className="text-xs text-[#6f879c] tracking-[0.02em] uppercase mb-3">03 — Numbers & Systems</p>
           <h2 className="text-4xl md:text-6xl font-normal leading-[1.25] tracking-[-0.01em] mb-8">
             숫자로 현장을 읽습니다
@@ -196,7 +196,7 @@ export default function HybePortfolio() {
             {/* Connector */}
             <div className="flex flex-col items-center py-6">
               <div className="w-px h-8 bg-[#403f3f]" />
-              <div className="h-[2px] w-24 bg-gradient-to-r from-[#ff2a2a] via-[#2aff2a] to-[#2a7fff] opacity-80 my-3" />
+              <div className="prism-anim h-[2px] w-24 bg-gradient-to-r from-[#ff2a2a] via-[#2aff2a] to-[#2a7fff] opacity-80 my-3" />
               <p className="text-xs text-[#6f879c]">매일 21:10 — AI 에이전트가 5개 채널 자동 수집</p>
               <div className="w-px h-8 bg-[#403f3f] mt-3" />
             </div>
@@ -245,7 +245,7 @@ export default function HybePortfolio() {
 
       {/* 04 Career */}
       <section className="w-full py-28 px-8 md:px-16 border-t border-[#403f3f]">
-        <div className="max-w-[1440px] mx-auto">
+        <div className="max-w-[1440px] mx-auto reveal-item">
           <p className="text-xs text-[#6f879c] tracking-[0.02em] uppercase mb-3">04 — Career</p>
           <h2 className="text-4xl md:text-6xl font-normal leading-[1.25] tracking-[-0.01em] mb-16">
             10년의 현장
@@ -273,12 +273,12 @@ export default function HybePortfolio() {
 
       {/* Outro */}
       <section className="w-full py-40 px-8 md:px-16 border-t border-[#403f3f]">
-        <div className="max-w-[1440px] mx-auto text-center">
+        <div className="max-w-[1440px] mx-auto text-center reveal-item">
           <h2 className="text-4xl md:text-7xl font-normal leading-[1.18] tracking-[-0.02em] mb-10">
             기획과 운영,<br />하나의 흐름으로
           </h2>
           <div className="flex justify-center mb-12">
-            <div className="h-[3px] w-32 bg-gradient-to-r from-[#ff2a2a] via-[#2aff2a] to-[#2a7fff] opacity-80" />
+            <div className="prism-anim h-[3px] w-32 bg-gradient-to-r from-[#ff2a2a] via-[#2aff2a] to-[#2a7fff] opacity-80" />
           </div>
           <p className="text-base md:text-lg text-[#6f879c] max-w-xl mx-auto leading-[1.9] mb-14">
             팬과 아티스트 모두에게 최고의 경험을 만드는 무대.<br />
