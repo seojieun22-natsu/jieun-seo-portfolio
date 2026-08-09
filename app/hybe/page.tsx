@@ -31,7 +31,7 @@ export default function HybePortfolio() {
           <div className="hero-fade-3 flex justify-center mb-12">
             <div className="prism-anim h-[3px] w-48 bg-gradient-to-r from-[#ff2a2a] via-[#2aff2a] to-[#2a7fff] opacity-80" />
           </div>
-          <p className="hero-fade-3 text-lg md:text-xl text-[#6f879c] leading-[1.8] max-w-2xl mx-auto">
+          <p className="hero-fade-3 text-lg md:text-xl text-[#aebcca] leading-[1.8] max-w-2xl mx-auto">
             IP의 세계관을 공간과 경험으로 구현해온 이벤트 기획자입니다.<br />
             컨셉 기획부터 예산 운영, 현장 총괄까지 — 전 사이클을 책임집니다.
           </p>
@@ -44,7 +44,7 @@ export default function HybePortfolio() {
             ].map((s) => (
               <div key={s.label} className="bg-[#101010] p-6 md:p-8">
                 <p className="text-3xl md:text-5xl font-normal leading-[1.01] mb-2">{s.num}</p>
-                <p className="text-xs md:text-sm text-[#6f879c]">{s.label}</p>
+                <p className="text-sm md:text-base text-[#aebcca]">{s.label}</p>
               </div>
             ))}
           </div>
@@ -58,7 +58,7 @@ export default function HybePortfolio() {
           <h2 className="text-4xl md:text-6xl font-normal leading-[1.25] tracking-[-0.01em] mb-8">
             IP 라이선스 팝업,<br />기획부터 현장까지
           </h2>
-          <p className="text-base md:text-lg text-[#6f879c] max-w-2xl leading-[1.9] mb-16">
+          <p className="text-lg md:text-xl text-[#aebcca] max-w-2xl leading-[1.9] mb-16">
             Disney · Pixar · Pokémon · 데브시스터즈. 브랜드의 세계관이 공간에서
             관객의 경험으로 완성되도록 컨셉 설계, VMD, 예산 운영, 현장 총괄의
             전 과정을 직접 담당했습니다.
@@ -114,9 +114,9 @@ export default function HybePortfolio() {
             ].map((p) => (
               <div key={p.title} className="card-hover bg-[#101010] p-8 md:p-10">
                 <p className="text-2xl mb-4">{p.emoji}</p>
-                <h3 className="text-xl md:text-2xl font-medium leading-[1.4] mb-4">{p.title}</h3>
-                <p className="text-sm text-[#6f879c] leading-[1.8] mb-5">{p.desc}</p>
-                <p className="text-xs text-[#6f879c] tracking-[0.02em] uppercase">✦ {p.tag}</p>
+                <h3 className="text-xl md:text-2xl font-semibold leading-[1.4] mb-4">{p.title}</h3>
+                <p className="text-base text-[#aebcca] leading-[1.8] mb-5">{p.desc}</p>
+                <p className="text-sm text-[#8fa0b0] tracking-[0.02em] uppercase">✦ {p.tag}</p>
               </div>
             ))}
           </div>
@@ -130,7 +130,7 @@ export default function HybePortfolio() {
           <h2 className="text-4xl md:text-6xl font-normal leading-[1.25] tracking-[-0.01em] mb-8">
             관객의 눈,<br />운영자의 몸
           </h2>
-          <p className="text-base md:text-lg text-[#6f879c] max-w-2xl leading-[1.9] mb-16">
+          <p className="text-lg md:text-xl text-[#aebcca] max-w-2xl leading-[1.9] mb-16">
             15살부터 음악과 K-POP을 사랑하며 수많은 공연과 이벤트를 경험했습니다.
             보는 것에 그치지 않고 직접 현장에 들어가, 규모별 운영 프로세스가
             실제로 어떻게 움직이는지 몸으로 익혔습니다.
@@ -156,8 +156,8 @@ export default function HybePortfolio() {
             ].map((c) => (
               <div key={c.title} className="card-hover bg-[#101010] p-8 md:p-10">
                 <p className="text-2xl mb-4">{c.emoji}</p>
-                <h3 className="text-xl md:text-2xl font-medium leading-[1.4] mb-4">{c.title}</h3>
-                <p className="text-sm text-[#6f879c] leading-[1.8]">{c.desc}</p>
+                <h3 className="text-xl md:text-2xl font-semibold leading-[1.4] mb-4">{c.title}</h3>
+                <p className="text-base text-[#aebcca] leading-[1.8]">{c.desc}</p>
               </div>
             ))}
           </div>
@@ -171,7 +171,7 @@ export default function HybePortfolio() {
           <h2 className="text-4xl md:text-6xl font-normal leading-[1.25] tracking-[-0.01em] mb-8">
             숫자로 현장을 읽습니다
           </h2>
-          <p className="text-base md:text-lg text-[#6f879c] max-w-2xl leading-[1.9] mb-16">
+          <p className="text-lg md:text-xl text-[#aebcca] max-w-2xl leading-[1.9] mb-16">
             예산 편성과 정산 프로세스를 직접 운영하고, 매출·재고·시간대별 데이터를
             분석해 운영 판단에 연결합니다. 반복 업무는 AI로 자동화해
             데이터와 히스토리가 누락되지 않는 구조를 만들었습니다.
@@ -179,7 +179,7 @@ export default function HybePortfolio() {
 
           {/* 매출 데이터 파이프라인 인포그래픽 */}
           <div className="rounded-[15px] border border-[#403f3f] p-8 md:p-12 mb-12">
-            <p className="text-xs text-[#6f879c] tracking-[0.02em] uppercase mb-10 text-center">
+            <p className="text-sm text-[#8fa0b0] tracking-[0.02em] uppercase mb-10 text-center">
               Daily Sales Data Pipeline — 직접 설계·운영 중인 자동화 구조
             </p>
 
@@ -187,8 +187,8 @@ export default function HybePortfolio() {
             <div className="grid grid-cols-2 md:grid-cols-5 gap-px bg-[#403f3f] border border-[#403f3f] max-w-3xl mx-auto">
               {["POS", "가챠 2F", "가챠 3F", "AI 사진기", "네컷사진"].map((ch) => (
                 <div key={ch} className="bg-[#101010] px-4 py-5 text-center">
-                  <p className="text-sm">{ch}</p>
-                  <p className="text-[10px] text-[#6f879c] mt-1">매출 발생 채널</p>
+                  <p className="text-base font-medium">{ch}</p>
+                  <p className="text-xs text-[#8fa0b0] mt-1">매출 발생 채널</p>
                 </div>
               ))}
             </div>
@@ -197,14 +197,14 @@ export default function HybePortfolio() {
             <div className="flex flex-col items-center py-6">
               <div className="w-px h-8 bg-[#403f3f]" />
               <div className="prism-anim h-[2px] w-24 bg-gradient-to-r from-[#ff2a2a] via-[#2aff2a] to-[#2a7fff] opacity-80 my-3" />
-              <p className="text-xs text-[#6f879c]">매일 21:10 — AI 에이전트가 5개 채널 자동 수집</p>
+              <p className="text-sm text-[#aebcca]">매일 21:10 — AI 에이전트가 5개 채널 자동 수집</p>
               <div className="w-px h-8 bg-[#403f3f] mt-3" />
             </div>
 
             {/* Step 2: DB */}
             <div className="border border-[#403f3f] max-w-md mx-auto px-6 py-5 text-center">
-              <p className="text-sm">통합 매출 데이터베이스</p>
-              <p className="text-[10px] text-[#6f879c] mt-1">일자·채널·상품 단위 적재, 누락 검증 포함</p>
+              <p className="text-base font-medium">통합 매출 데이터베이스</p>
+              <p className="text-xs text-[#8fa0b0] mt-1">일자·채널·상품 단위 적재, 누락 검증 포함</p>
             </div>
 
             {/* Connector */}
@@ -220,8 +220,8 @@ export default function HybePortfolio() {
                 { t: "운영 판단", d: "발주·인력·상품 구성 반영" },
               ].map((o) => (
                 <div key={o.t} className="bg-[#101010] px-4 py-5 text-center">
-                  <p className="text-sm">{o.t}</p>
-                  <p className="text-[10px] text-[#6f879c] mt-1">{o.d}</p>
+                  <p className="text-base font-medium">{o.t}</p>
+                  <p className="text-xs text-[#8fa0b0] mt-1">{o.d}</p>
                 </div>
               ))}
             </div>
@@ -236,7 +236,7 @@ export default function HybePortfolio() {
             ].map((s) => (
               <div key={s.label} className="bg-[#101010] p-6 md:p-8">
                 <p className="text-2xl md:text-3xl font-normal leading-[1.01] mb-2">{s.num}</p>
-                <p className="text-xs text-[#6f879c] leading-relaxed">{s.label}</p>
+                <p className="text-sm text-[#aebcca] leading-relaxed">{s.label}</p>
               </div>
             ))}
           </div>
@@ -260,10 +260,10 @@ export default function HybePortfolio() {
               { period: "2015.06 ~ 2022.06", org: "비알코리아(주)", role: "수도권직영팀 7년 · 리테일 현장 운영" },
             ].map((c, i) => (
               <div key={i} className="flex flex-col md:flex-row gap-2 md:gap-8 py-6 border-b border-[#403f3f]">
-                <p className="text-sm text-[#6f879c] md:w-52 shrink-0">{c.period}</p>
+                <p className="text-base text-[#8fa0b0] md:w-52 shrink-0">{c.period}</p>
                 <div>
-                  <p className="text-lg font-normal">{c.org}</p>
-                  <p className="text-sm text-[#6f879c] mt-1">{c.role}</p>
+                  <p className="text-lg font-medium">{c.org}</p>
+                  <p className="text-base text-[#aebcca] mt-1">{c.role}</p>
                 </div>
               </div>
             ))}
@@ -280,7 +280,7 @@ export default function HybePortfolio() {
           <div className="flex justify-center mb-12">
             <div className="prism-anim h-[3px] w-32 bg-gradient-to-r from-[#ff2a2a] via-[#2aff2a] to-[#2a7fff] opacity-80" />
           </div>
-          <p className="text-base md:text-lg text-[#6f879c] max-w-xl mx-auto leading-[1.9] mb-14">
+          <p className="text-lg md:text-xl text-[#aebcca] max-w-xl mx-auto leading-[1.9] mb-14">
             팬과 아티스트 모두에게 최고의 경험을 만드는 무대.<br />
             그 현장에서 일하고 싶습니다.
           </p>
