@@ -166,12 +166,12 @@ export default function HybePortfolio() {
             데이터와 히스토리가 누락되지 않는 구조를 만들었습니다.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
+          <div className="flex flex-col gap-6 mb-12 max-w-3xl mx-auto">
             <div className="rounded-[15px] overflow-hidden border border-[#403f3f]">
-              <img src="/dashboard-powerbi.png" alt="Power BI 위클리 리포트 대시보드" className="w-full object-cover" />
+              <img src="/dashboard-powerbi.png" alt="Power BI 위클리 리포트 대시보드" className="w-full" />
             </div>
             <div className="rounded-[15px] overflow-hidden border border-[#403f3f]">
-              <img src="/dashboard-sales.png" alt="매출 자동 수집 대시보드" className="w-full object-cover object-top" />
+              <img src="/dashboard-sales.png" alt="매출 자동 수집 대시보드" className="w-full" />
             </div>
           </div>
 
