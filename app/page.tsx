@@ -39,7 +39,7 @@ export default function Home() {
           <div className="mt-16 pt-16 border-t border-[#e5e5e5] grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-[#e5e5e5]">
             {[
               { num: "10년+", label: "리테일 경력", sub: "2015 – 현재" },
-              { num: "8개+", label: "IP 팝업 운영", sub: "Disney · Pokémon · 데브시스터즈" },
+              { num: "6개+", label: "IP 팝업 운영", sub: "Disney · Pokémon · 데브시스터즈" },
               { num: "5곳", label: "매출 자동화", sub: "POS · 가챠 · AI사진기 · 네컷 · 키오스크" },
             ].map((stat) => (
               <div key={stat.num} className="px-0 md:px-12 py-8 first:pl-0 last:pr-0">
