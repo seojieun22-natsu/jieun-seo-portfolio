@@ -40,7 +40,7 @@ export default function HybePortfolio() {
             {[
               { num: "6+", label: "IP 팝업 기획·운영" },
               { num: "10년+", label: "리테일 · 이벤트 현장" },
-              { num: "15살~", label: "공연과 함께한 시간" },
+              { num: "E2E", label: "컨셉 기획부터 정산까지" },
             ].map((s) => (
               <div key={s.label} className="bg-[#101010] p-6 md:p-8">
                 <p className="text-3xl md:text-5xl font-normal leading-[1.01] mb-2">{s.num}</p>
