@@ -37,6 +37,36 @@
   transform: none;
 }
 
+/* Pipeline flow pulse — each step lights up in sequence */
+.flow-step {
+  border: 1px solid #403f3f;
+  animation: flowPulse 6s ease-in-out infinite;
+}
+@keyframes flowPulse {
+  0%, 22%, 100% {
+    border-color: #403f3f;
+    box-shadow: none;
+    background-color: #101010;
+  }
+  8% {
+    border-color: var(--fc, #fffdf9);
+    box-shadow: 0 0 22px 0 color-mix(in srgb, var(--fc, #fffdf9) 40%, transparent);
+    background-color: color-mix(in srgb, var(--fc, #fffdf9) 7%, #101010);
+  }
+}
+.flow-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--fc, #fffdf9);
+  margin-bottom: 10px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flow-step { animation: none; border-color: var(--fc, #403f3f); }
+}
+
 /* Card hover */
 .card-hover {
   transition: background-color 0.3s ease, transform 0.3s ease;

@@ -179,16 +179,27 @@ export default function HybePortfolio() {
 
           {/* 매출 데이터 파이프라인 인포그래픽 */}
           <div className="rounded-[15px] border border-[#403f3f] p-8 md:p-12 mb-12">
-            <p className="text-sm text-[#8fa0b0] tracking-[0.02em] uppercase mb-10 text-center">
+            <p className="text-base text-[#aebcca] tracking-[0.02em] uppercase mb-10 text-center">
               Daily Sales Data Pipeline — 직접 설계·운영 중인 자동화 구조
             </p>
 
             {/* Step 1: 5 channels */}
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-px bg-[#403f3f] border border-[#403f3f] max-w-3xl mx-auto">
-              {["POS", "가챠 2F", "가챠 3F", "AI 사진기", "네컷사진"].map((ch) => (
-                <div key={ch} className="bg-[#101010] px-4 py-5 text-center">
-                  <p className="text-base font-medium">{ch}</p>
-                  <p className="text-xs text-[#8fa0b0] mt-1">매출 발생 채널</p>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-3 max-w-4xl mx-auto">
+              {[
+                { ch: "POS", color: "#ff2a2a", delay: 0 },
+                { ch: "가챠 2F", color: "#ffb02a", delay: 0.35 },
+                { ch: "가챠 3F", color: "#2aff2a", delay: 0.7 },
+                { ch: "AI 사진기", color: "#2ad5ff", delay: 1.05 },
+                { ch: "네컷사진", color: "#b02aff", delay: 1.4 },
+              ].map((c) => (
+                <div
+                  key={c.ch}
+                  className="flow-step rounded-[10px] bg-[#101010] px-4 py-6 text-center"
+                  style={{ "--fc": c.color, animationDelay: `${c.delay}s` } as React.CSSProperties}
+                >
+                  <span className="flow-dot" style={{ "--fc": c.color } as React.CSSProperties} />
+                  <p className="text-lg font-semibold">{c.ch}</p>
+                  <p className="text-sm text-[#aebcca] mt-1">매출 발생 채널</p>
                 </div>
               ))}
             </div>
@@ -197,14 +208,18 @@ export default function HybePortfolio() {
             <div className="flex flex-col items-center py-6">
               <div className="w-px h-8 bg-[#403f3f]" />
               <div className="prism-anim h-[2px] w-24 bg-gradient-to-r from-[#ff2a2a] via-[#2aff2a] to-[#2a7fff] opacity-80 my-3" />
-              <p className="text-sm text-[#aebcca]">매일 21:10 — AI 에이전트가 5개 채널 자동 수집</p>
+              <p className="text-base text-[#aebcca]">매일 21:10 — AI 에이전트가 5개 채널 자동 수집</p>
               <div className="w-px h-8 bg-[#403f3f] mt-3" />
             </div>
 
             {/* Step 2: DB */}
-            <div className="border border-[#403f3f] max-w-md mx-auto px-6 py-5 text-center">
-              <p className="text-base font-medium">통합 매출 데이터베이스</p>
-              <p className="text-xs text-[#8fa0b0] mt-1">일자·채널·상품 단위 적재, 누락 검증 포함</p>
+            <div
+              className="flow-step rounded-[10px] max-w-md mx-auto px-6 py-6 text-center"
+              style={{ "--fc": "#2a7fff", animationDelay: "2.3s" } as React.CSSProperties}
+            >
+              <span className="flow-dot" style={{ "--fc": "#2a7fff" } as React.CSSProperties} />
+              <p className="text-lg font-semibold">통합 매출 데이터베이스</p>
+              <p className="text-sm text-[#aebcca] mt-1">일자·채널·상품 단위 적재, 누락 검증 포함</p>
             </div>
 
             {/* Connector */}
@@ -213,15 +228,20 @@ export default function HybePortfolio() {
             </div>
 
             {/* Step 3: outputs */}
-            <div className="grid md:grid-cols-3 gap-px bg-[#403f3f] border border-[#403f3f] max-w-3xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-3 max-w-4xl mx-auto">
               {[
-                { t: "Power BI 위클리 리포트", d: "매출·재고·시간대 분석" },
-                { t: "일일 매출 브리핑", d: "슬랙 자동 발송" },
-                { t: "운영 판단", d: "발주·인력·상품 구성 반영" },
+                { t: "Power BI 위클리 리포트", d: "매출·재고·시간대 분석", color: "#ffb02a", delay: 3.2 },
+                { t: "일일 매출 브리핑", d: "슬랙 자동 발송", color: "#2aff2a", delay: 3.55 },
+                { t: "운영 판단", d: "발주·인력·상품 구성 반영", color: "#ff2a7f", delay: 3.9 },
               ].map((o) => (
-                <div key={o.t} className="bg-[#101010] px-4 py-5 text-center">
-                  <p className="text-base font-medium">{o.t}</p>
-                  <p className="text-xs text-[#8fa0b0] mt-1">{o.d}</p>
+                <div
+                  key={o.t}
+                  className="flow-step rounded-[10px] bg-[#101010] px-4 py-6 text-center"
+                  style={{ "--fc": o.color, animationDelay: `${o.delay}s` } as React.CSSProperties}
+                >
+                  <span className="flow-dot" style={{ "--fc": o.color } as React.CSSProperties} />
+                  <p className="text-lg font-semibold">{o.t}</p>
+                  <p className="text-sm text-[#aebcca] mt-1">{o.d}</p>
                 </div>
               ))}
             </div>
