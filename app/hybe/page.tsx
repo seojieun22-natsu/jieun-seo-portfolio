@@ -205,7 +205,7 @@ export default function HybePortfolio() {
                   <span className="text-3xl">🎫</span>
                   <div>
                     <p className="text-lg font-bold leading-snug">IP 팝업 기획·운영 6+</p>
-                    <p className="text-sm text-[#aebcca] mt-1">Disney · Pixar · Pokémon — 컨셉부터 현장·정산까지 총괄</p>
+                    <p className="text-base text-[#aebcca] mt-1">Disney · Pixar · Pokémon — 컨셉부터 현장·정산까지 총괄</p>
                   </div>
                 </div>
                 <div className="ticket-stub flex items-center px-4">
@@ -278,7 +278,7 @@ export default function HybePortfolio() {
                 >
                   <span className="flow-dot" style={{ "--fc": c.color } as React.CSSProperties} />
                   <p className="text-lg font-semibold">{c.ch}</p>
-                  <p className="text-sm text-[#aebcca] mt-1">매출 발생 채널</p>
+                  <p className="text-base text-[#aebcca] mt-1">매출 발생 채널</p>
                 </div>
               ))}
             </div>
@@ -287,7 +287,7 @@ export default function HybePortfolio() {
             <div className="flex flex-col items-center py-6">
               <div className="w-px h-8 bg-[#403f3f]" />
               <div className="prism-anim h-[2px] w-24 bg-gradient-to-r from-[#ff2a2a] via-[#2aff2a] to-[#2a7fff] opacity-80 my-3" />
-              <p className="text-base text-[#aebcca]">매일 21:10 — AI 에이전트가 5개 채널 자동 수집</p>
+              <p className="text-lg text-[#aebcca]">매일 21:10 — AI 에이전트가 5개 채널 자동 수집</p>
               <div className="w-px h-8 bg-[#403f3f] mt-3" />
             </div>
 
@@ -298,7 +298,7 @@ export default function HybePortfolio() {
             >
               <span className="flow-dot" style={{ "--fc": "#2a7fff" } as React.CSSProperties} />
               <p className="text-lg font-semibold">통합 매출 데이터베이스</p>
-              <p className="text-sm text-[#aebcca] mt-1">일자·채널·상품 단위 적재, 누락 검증 포함</p>
+              <p className="text-base text-[#aebcca] mt-1">일자·채널·상품 단위 적재, 누락 검증 포함</p>
             </div>
 
             {/* Connector */}
@@ -320,7 +320,7 @@ export default function HybePortfolio() {
                 >
                   <span className="flow-dot" style={{ "--fc": o.color } as React.CSSProperties} />
                   <p className="text-lg font-semibold">{o.t}</p>
-                  <p className="text-sm text-[#aebcca] mt-1">{o.d}</p>
+                  <p className="text-base text-[#aebcca] mt-1">{o.d}</p>
                 </div>
               ))}
             </div>
@@ -335,7 +335,7 @@ export default function HybePortfolio() {
             ].map((s) => (
               <div key={s.label} className="bg-[#101010] p-6 md:p-8">
                 <p className="text-2xl md:text-3xl font-normal leading-[1.01] mb-2">{s.num}</p>
-                <p className="text-sm text-[#aebcca] leading-relaxed">{s.label}</p>
+                <p className="text-base text-[#aebcca] leading-relaxed">{s.label}</p>
               </div>
             ))}
           </div>
