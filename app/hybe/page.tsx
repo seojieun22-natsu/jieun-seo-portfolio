@@ -166,12 +166,53 @@ export default function HybePortfolio() {
             데이터와 히스토리가 누락되지 않는 구조를 만들었습니다.
           </p>
 
-          <div className="flex flex-col gap-6 mb-12 max-w-3xl mx-auto">
-            <div className="rounded-[15px] overflow-hidden border border-[#403f3f]">
-              <img src="/dashboard-powerbi.png" alt="Power BI 위클리 리포트 대시보드" className="w-full" />
+          {/* 매출 데이터 파이프라인 인포그래픽 */}
+          <div className="rounded-[15px] border border-[#403f3f] p-8 md:p-12 mb-12">
+            <p className="text-xs text-[#6f879c] tracking-[0.02em] uppercase mb-10 text-center">
+              Daily Sales Data Pipeline — 직접 설계·운영 중인 자동화 구조
+            </p>
+
+            {/* Step 1: 5 channels */}
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-px bg-[#403f3f] border border-[#403f3f] max-w-3xl mx-auto">
+              {["POS", "가챠 2F", "가챠 3F", "AI 사진기", "네컷사진"].map((ch) => (
+                <div key={ch} className="bg-[#101010] px-4 py-5 text-center">
+                  <p className="text-sm">{ch}</p>
+                  <p className="text-[10px] text-[#6f879c] mt-1">매출 발생 채널</p>
+                </div>
+              ))}
             </div>
-            <div className="rounded-[15px] overflow-hidden border border-[#403f3f]">
-              <img src="/dashboard-sales.png" alt="매출 자동 수집 대시보드" className="w-full" />
+
+            {/* Connector */}
+            <div className="flex flex-col items-center py-6">
+              <div className="w-px h-8 bg-[#403f3f]" />
+              <div className="h-[2px] w-24 bg-gradient-to-r from-[#ff2a2a] via-[#2aff2a] to-[#2a7fff] opacity-80 my-3" />
+              <p className="text-xs text-[#6f879c]">매일 21:10 — AI 에이전트가 5개 채널 자동 수집</p>
+              <div className="w-px h-8 bg-[#403f3f] mt-3" />
+            </div>
+
+            {/* Step 2: DB */}
+            <div className="border border-[#403f3f] max-w-md mx-auto px-6 py-5 text-center">
+              <p className="text-sm">통합 매출 데이터베이스</p>
+              <p className="text-[10px] text-[#6f879c] mt-1">일자·채널·상품 단위 적재, 누락 검증 포함</p>
+            </div>
+
+            {/* Connector */}
+            <div className="flex flex-col items-center py-6">
+              <div className="w-px h-8 bg-[#403f3f]" />
+            </div>
+
+            {/* Step 3: outputs */}
+            <div className="grid md:grid-cols-3 gap-px bg-[#403f3f] border border-[#403f3f] max-w-3xl mx-auto">
+              {[
+                { t: "Power BI 위클리 리포트", d: "매출·재고·시간대 분석" },
+                { t: "일일 매출 브리핑", d: "슬랙 자동 발송" },
+                { t: "운영 판단", d: "발주·인력·상품 구성 반영" },
+              ].map((o) => (
+                <div key={o.t} className="bg-[#101010] px-4 py-5 text-center">
+                  <p className="text-sm">{o.t}</p>
+                  <p className="text-[10px] text-[#6f879c] mt-1">{o.d}</p>
+                </div>
+              ))}
             </div>
           </div>
 
