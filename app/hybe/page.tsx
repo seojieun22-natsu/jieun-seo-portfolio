@@ -194,7 +194,7 @@ export default function HybePortfolio() {
 
           {/* 매출 데이터 파이프라인 인포그래픽 */}
           <div className="rounded-[15px] border border-[#403f3f] p-8 md:p-12 mb-12">
-            <p className="text-base text-[#aebcca] tracking-[0.02em] uppercase mb-10 text-center">
+            <p className="text-lg md:text-xl font-bold text-[#fffdf9] tracking-[0.02em] uppercase mb-10 text-center">
               Daily Sales Data Pipeline — 직접 설계·운영 중인 자동화 구조
             </p>
 
