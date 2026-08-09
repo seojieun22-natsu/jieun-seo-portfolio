@@ -80,43 +80,50 @@ export default function HybePortfolio() {
                 title: "토이스토리5 팝업 (성수)",
                 desc: "Disney/Pixar 라이선스. 자체 제작 토이 카메라 + DIY 키캡 키링 기획. 컨셉 설계부터 상품 개발, 현장 운영까지 총괄.",
                 tag: "컨셉 기획 · 상품 개발 · 현장 총괄",
+                img: "/popup-toystory.png",
+                wide: false,
               },
               {
                 emoji: "🦊",
                 title: "주토피아2 팝업 (잠실)",
                 desc: "Disney IP 팝업스토어 기획·운영. 방문객 응대 체계와 매출 추적 시스템 구축, 운영보고서 작성.",
                 tag: "팝업 운영 · KPI 관리",
+                img: "/popup-zootopia.jpg",
+                wide: false,
               },
               {
                 emoji: "✈️",
                 title: "K-헤리티지 & 주토피아2 (제주공항)",
                 desc: "공항 입점 특수성을 반영한 VMD와 운영 매뉴얼 직접 제작. 복합 IP 공간 구성.",
                 tag: "VMD · 운영 매뉴얼",
+                img: "/popup-jeju.png",
+                wide: false,
               },
               {
                 emoji: "🍪",
                 title: "쿠키런 〈쿠키앤모어〉 팝업",
                 desc: "데브시스터즈 IP. 운영안 수립부터 재고 시스템 세팅, 매출 정산까지 전 과정 담당. 실시간 품절현황 공유 페이지 직접 제작.",
                 tag: "운영 설계 · 정산 · 시스템 구축",
+                img: "/popup-cookie.png",
+                wide: false,
               },
               {
                 emoji: "⚡",
                 title: "Pokémon Korea 팝업 컨설팅",
                 desc: "가차형 팝업스토어 판매 구조를 반영한 운영 인력·재고·물류·MD 전체 체계 설계. 제안부터 수주, 컨설팅 PM 수행.",
                 tag: "제안 · 수주 · 운영 컨설팅 PM",
-              },
-              {
-                emoji: "🌏",
-                title: "글로벌 브랜드 굿즈 사업화",
-                desc: "현지 생산·수입 혼합형 상품 운영 및 팝업스토어 사업화. 굿즈 기획·소싱·판매 전 과정 담당.",
-                tag: "굿즈 기획 · 소싱 · 사업화",
+                img: "/popup-pokemon.png",
+                wide: true,
               },
             ].map((p) => (
-              <div key={p.title} className="card-hover bg-[#101010] p-8 md:p-10">
-                <p className="text-2xl mb-4">{p.emoji}</p>
-                <h3 className="text-xl md:text-2xl font-semibold leading-[1.4] mb-4">{p.title}</h3>
-                <p className="text-base text-[#aebcca] leading-[1.8] mb-5">{p.desc}</p>
-                <p className="text-sm text-[#8fa0b0] tracking-[0.02em] uppercase">✦ {p.tag}</p>
+              <div key={p.title} className={`card-hover card-photo bg-[#101010] p-8 md:p-10 ${p.wide ? "md:col-span-2" : ""}`}>
+                <div className="card-bg" style={{ backgroundImage: `url(${p.img})` }} />
+                <div className="relative z-10">
+                  <p className="text-2xl mb-4">{p.emoji}</p>
+                  <h3 className="text-xl md:text-2xl font-semibold leading-[1.4] mb-4">{p.title}</h3>
+                  <p className="text-base text-[#aebcca] leading-[1.8] mb-5">{p.desc}</p>
+                  <p className="text-sm text-[#8fa0b0] tracking-[0.02em] uppercase">✦ {p.tag}</p>
+                </div>
               </div>
             ))}
           </div>

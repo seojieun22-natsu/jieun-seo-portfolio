@@ -76,6 +76,35 @@
   transform: translateY(-3px);
 }
 
+/* Card hover photo reveal */
+.card-photo {
+  position: relative;
+  overflow: hidden;
+}
+.card-photo .card-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.06);
+  transition: opacity 0.5s ease, transform 0.7s ease;
+}
+.card-photo .card-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(16, 16, 16, 0.92) 15%, rgba(16, 16, 16, 0.55) 60%, rgba(16, 16, 16, 0.35) 100%);
+}
+.card-photo:hover .card-bg {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-photo .card-bg { transition: none; transform: none; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-fade-1, .hero-fade-2, .hero-fade-3, .hero-fade-4 { animation: none; }
   .prism-anim { animation: none; }
