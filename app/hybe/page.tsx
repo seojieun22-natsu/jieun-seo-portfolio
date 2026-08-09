@@ -65,10 +65,10 @@ export default function HybePortfolio() {
           </p>
 
           <div className="grid md:grid-cols-2 gap-6 mb-16">
-            <div className="rounded-[15px] overflow-hidden border border-[#403f3f]">
-              <img src="/popup-jeju.png" alt="제주공항 K-헤리티지 & Disney 팝업" className="w-full h-full object-cover" />
+            <div className="rounded-[15px] overflow-hidden border border-[#403f3f] aspect-[3/2]">
+              <img src="/popup-toystory.png" alt="토이스토리5 팝업 (성수)" className="w-full h-full object-cover" style={{ objectPosition: "50% 35%" }} />
             </div>
-            <div className="rounded-[15px] overflow-hidden border border-[#403f3f]">
+            <div className="rounded-[15px] overflow-hidden border border-[#403f3f] aspect-[3/2]">
               <img src="/popup-cookie.png" alt="쿠키런 Cookie & More 팝업" className="w-full h-full object-cover" />
             </div>
           </div>
