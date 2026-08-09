@@ -66,12 +66,36 @@ export default function HybePortfolio() {
             계약·예산관리 및 정산까지 — 같은 역량으로 공연 현장의 문제를 풉니다.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-6 mb-16">
+          <div className="grid md:grid-cols-3 gap-6 mb-16">
             <div className="rounded-[15px] overflow-hidden border border-[#403f3f] aspect-[3/2]">
               <img src="/popup-toystory.png" alt="토이스토리5 팝업 (성수)" className="w-full h-full object-cover" style={{ objectPosition: "50% 35%" }} />
             </div>
             <div className="rounded-[15px] overflow-hidden border border-[#403f3f] aspect-[3/2]">
               <img src="/popup-cookie.png" alt="쿠키런 Cookie & More 팝업" className="w-full h-full object-cover" />
+            </div>
+            {/* 실시간 품절현황 페이지 — 재구성 목업 */}
+            <div className="rounded-[15px] border border-[#403f3f] aspect-[3/2] bg-[#161616] p-5 flex flex-col">
+              <div className="flex items-center justify-between mb-3">
+                <p className="text-sm font-bold">🍪 실시간 품절현황</p>
+                <span className="flex items-center gap-1.5 text-[10px] font-bold tracking-widest text-[#2aff2a]">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#2aff2a] inline-block" />LIVE
+                </span>
+              </div>
+              <div className="flex-1 flex flex-col justify-between text-sm">
+                {[
+                  { name: "아크릴 키링", st: "판매중", c: "#2aff2a" },
+                  { name: "한정판 인형", st: "품절", c: "#ff2a2a" },
+                  { name: "스티커 팩", st: "잔여 5", c: "#ffb02a" },
+                  { name: "아크릴 스탠드", st: "판매중", c: "#2aff2a" },
+                  { name: "마그넷 세트", st: "품절", c: "#ff2a2a" },
+                ].map((r) => (
+                  <div key={r.name} className="flex items-center justify-between border-b border-[#2a2a2a] py-1.5 last:border-0">
+                    <span className="text-[#aebcca]">{r.name}</span>
+                    <span className="font-semibold" style={{ color: r.c }}>{r.st}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-[10px] text-[#6f879c] mt-2">직접 제작·운영한 페이지 — 보안상 화면은 재구성한 예시</p>
             </div>
           </div>
 
@@ -364,7 +388,7 @@ export default function HybePortfolio() {
               { period: "2026 ~", org: "IdeaPLAB (SMORE)", role: "MD · 리테일 운영 · IP 팝업 기획/운영" },
               { period: "2025.04 ~ 2025.12", org: "트랜스코스모스코리아", role: "EC사업부 전략기획팀 · Pokémon 팝업 컨설팅 PM" },
               { period: "2024.01 ~ 2025.04", org: "쿠팡 리테일", role: "리테일 · 데이터 기반 운영 프로세스" },
-              { period: "2022.06 ~ 2025.03", org: "싸이들", role: "전략기획팀 · 플랫폼 입점/콘텐츠 운영" },
+              { period: "2022.06 ~ 2025.03 (병행)", org: "싸이들", role: "전략기획팀 · 플랫폼 입점/콘텐츠 운영 — 타 직장과 병행 수행" },
               { period: "2015.06 ~ 2022.06", org: "비알코리아(주)", role: "수도권직영팀 7년 — 직영 매장 현장 인력 관리 · 매출 책임 · 상시 고객 응대. 장기간 현장을 감당하며 운영의 기본기를 다진 시기" },
             ].map((c, i) => (
               <div key={i} className="flex flex-col md:flex-row gap-2 md:gap-8 py-6 border-b border-[#403f3f]">
@@ -375,6 +399,7 @@ export default function HybePortfolio() {
                 </div>
               </div>
             ))}
+            <p className="text-base text-[#8fa0b0] mt-6">✈️ 해외 출장 가능 — 결격사유 없음</p>
           </div>
         </div>
       </section>
