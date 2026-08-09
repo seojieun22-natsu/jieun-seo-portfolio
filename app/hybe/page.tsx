@@ -171,8 +171,7 @@ export default function HybePortfolio() {
                     items: [
                       { emoji: "🏃", t: "마라톤", d: "도심 대규모 러닝 행사 현장 운영", type: "STAFF", color: "#ffb02a", rot: 2 },
                       { emoji: "⚽", t: "축구 경기", d: "수만 명 규모 관중 운영", type: "STAFF", color: "#ff2a2a", rot: -1.5 },
-                      { emoji: "🎆", t: "야외 축제", d: "축제 현장 운영 스태프", type: "STAFF", color: "#2a7fff", rot: 1 },
-                      { emoji: "🌳", t: "파크 콘서트", d: "공원 공연 현장 운영", type: "STAFF", color: "#ff2a7f", rot: -0.5 },
+                      { emoji: "🎆", t: "야외 축제 · 콘서트", d: "축제 · 공원 공연 현장 운영", type: "STAFF", color: "#2a7fff", rot: 1 },
                     ],
                   },
                 ].map((col) => (
