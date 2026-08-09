@@ -243,7 +243,7 @@ export default function Home() {
               <div className="grid md:grid-cols-3 gap-4 mb-8">
                 {[
                   { num: "2", label: "상설 매장" },
-                  { num: "3+", label: "팝업 운영 경험" },
+                  { num: "6+", label: "팝업 운영 경험" },
                   { num: "매일", label: "매출 데이터 수집·분석" },
                 ].map((stat) => (
                   <div key={stat.label} className="border border-[#e5e5e5] rounded-xl p-6 text-center bg-[#f9f9f7]">
