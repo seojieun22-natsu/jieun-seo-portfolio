@@ -111,8 +111,22 @@
 .ticket-stub::before { top: -8px; }
 .ticket-stub::after { bottom: -8px; }
 
+/* 본업 강조 티켓 */
+.ticket-main {
+  background: #1c1c1c;
+  margin-top: 14px;
+  border-color: #fffdf9;
+  box-shadow: 0 0 26px 0 rgba(255, 253, 249, 0.14);
+  animation: mainGlow 3s ease-in-out infinite;
+}
+@keyframes mainGlow {
+  0%, 100% { box-shadow: 0 0 18px 0 rgba(255, 253, 249, 0.1); }
+  50% { box-shadow: 0 0 32px 0 rgba(255, 253, 249, 0.24); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .ticket, .ticket:hover { transform: none; transition: none; }
+  .ticket-main { animation: none; }
 }
 
 /* Card hover photo reveal */

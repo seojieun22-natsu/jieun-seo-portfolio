@@ -160,10 +160,10 @@ export default function HybePortfolio() {
                 { emoji: "💜", t: "아이돌 콘서트", d: "잠실 · 고척 · 월드투어 다수", type: "AUDIENCE", color: "#b02aff", rot: -2 },
                 { emoji: "🎸", t: "밴드 · 록 콘서트", d: "홀 공연부터 스타디움까지", type: "AUDIENCE", color: "#2ad5ff", rot: 1.5 },
                 { emoji: "🎪", t: "뮤직 페스티벌", d: "사운드베리 외 다수 관람", type: "AUDIENCE", color: "#2aff2a", rot: -1 },
-                { emoji: "🏃", t: "유아차런 마라톤", d: "잠실 · 서울 — 현장 운영", type: "STAFF", color: "#ffb02a", rot: 2 },
-                { emoji: "⚽", t: "FC서울 홈경기 ×2", d: "수만 명 규모 관중 운영", type: "STAFF", color: "#ff2a2a", rot: -1.5 },
-                { emoji: "🌉", t: "잠수교 뚜벅뚜벅 축제", d: "야외 축제 현장 운영", type: "STAFF", color: "#2a7fff", rot: 1 },
-                { emoji: "🌳", t: "분당 파크콘서트", d: "공원 공연 현장 운영", type: "STAFF", color: "#ff2a7f", rot: -0.5 },
+                { emoji: "🏃", t: "마라톤", d: "도심 대규모 러닝 행사 현장 운영", type: "STAFF", color: "#ffb02a", rot: 2 },
+                { emoji: "⚽", t: "축구 경기", d: "수만 명 규모 관중 운영", type: "STAFF", color: "#ff2a2a", rot: -1.5 },
+                { emoji: "🎆", t: "야외 축제", d: "축제 현장 운영 스태프", type: "STAFF", color: "#2a7fff", rot: 1 },
+                { emoji: "🌳", t: "파크 콘서트", d: "공원 공연 현장 운영", type: "STAFF", color: "#ff2a7f", rot: -0.5 },
               ].map((tk) => (
                 <div
                   key={tk.t}
@@ -184,6 +184,23 @@ export default function HybePortfolio() {
                   </div>
                 </div>
               ))}
+
+              {/* 본업 — IP 팝업 티켓 (강조) */}
+              <div
+                className="ticket ticket-main w-full max-w-md flex items-stretch"
+                style={{ "--fc": "#fffdf9", "--rot": "0deg" } as React.CSSProperties}
+              >
+                <div className="flex-1 flex items-center gap-4 px-5 py-5">
+                  <span className="text-3xl">🎫</span>
+                  <div>
+                    <p className="text-lg font-bold leading-snug">IP 팝업 기획·운영 6+</p>
+                    <p className="text-sm text-[#aebcca] mt-1">Disney · Pixar · Pokémon — 컨셉부터 현장·정산까지 총괄</p>
+                  </div>
+                </div>
+                <div className="ticket-stub flex items-center px-4">
+                  <span className="text-[11px] font-bold tracking-[0.15em] text-[#fffdf9]">MAIN JOB</span>
+                </div>
+              </div>
             </div>
           </div>
 
