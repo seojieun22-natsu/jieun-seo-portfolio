@@ -113,11 +113,19 @@ export default function HybePortfolio() {
                 desc: "가차형 팝업스토어 판매 구조를 반영한 운영 인력·재고·물류·MD 전체 체계 설계. 제안부터 수주, 컨설팅 PM 수행.",
                 tag: "제안 · 수주 · 운영 컨설팅 PM",
                 img: "/popup-pokemon.png",
-                wide: true,
+                wide: false,
+              },
+              {
+                emoji: "🌏",
+                title: "글로벌 브랜드 굿즈 사업화",
+                desc: "현지 생산·수입 혼합형 상품 운영 및 팝업스토어 사업화. 굿즈 기획·소싱·판매 전 과정 담당.",
+                tag: "굿즈 기획 · 소싱 · 사업화",
+                img: null,
+                wide: false,
               },
             ].map((p) => (
               <div key={p.title} className={`card-hover card-photo bg-[#101010] p-8 md:p-10 ${p.wide ? "md:col-span-2" : ""}`}>
-                <div className="card-bg" style={{ backgroundImage: `url(${p.img})` }} />
+                {p.img && <div className="card-bg" style={{ backgroundImage: `url(${p.img})` }} />}
                 <div className="relative z-10">
                   <p className="text-2xl mb-4">{p.emoji}</p>
                   <h3 className="text-xl md:text-2xl font-semibold leading-[1.4] mb-4">{p.title}</h3>
