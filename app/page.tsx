@@ -61,7 +61,7 @@ export default function Home() {
               <p className="font-mono text-[#888888] text-xs mt-1">About</p>
             </div>
             <div className="flex-1">
-              <h2 className="text-2xl font-bold mb-6">나는 누구인가</h2>
+              <h2 className="text-2xl font-bold mb-6">Jieun Seo</h2>
               <p className="text-[#555555] leading-relaxed mb-6">
                 현장과 운영, 데이터를 잇는 End-to-End 기획자입니다.
                 비알코리아 직영팀에서 시작해 10년 이상 리테일·이커머스 현장을 거쳤고,
