@@ -155,39 +155,51 @@ export default function HybePortfolio() {
             </div>
 
             {/* 티켓 스택 */}
-            <div className="flex flex-col items-center gap-0 py-4">
-              {[
-                { emoji: "💜", t: "아이돌 콘서트", d: "잠실 · 고척 · 월드투어 다수", type: "AUDIENCE", color: "#b02aff", rot: -2 },
-                { emoji: "🎸", t: "밴드 · 록 콘서트", d: "홀 공연부터 스타디움까지", type: "AUDIENCE", color: "#2ad5ff", rot: 1.5 },
-                { emoji: "🎪", t: "뮤직 페스티벌", d: "사운드베리 외 다수 관람", type: "AUDIENCE", color: "#2aff2a", rot: -1 },
-                { emoji: "🏃", t: "마라톤", d: "도심 대규모 러닝 행사 현장 운영", type: "STAFF", color: "#ffb02a", rot: 2 },
-                { emoji: "⚽", t: "축구 경기", d: "수만 명 규모 관중 운영", type: "STAFF", color: "#ff2a2a", rot: -1.5 },
-                { emoji: "🎆", t: "야외 축제", d: "축제 현장 운영 스태프", type: "STAFF", color: "#2a7fff", rot: 1 },
-                { emoji: "🌳", t: "파크 콘서트", d: "공원 공연 현장 운영", type: "STAFF", color: "#ff2a7f", rot: -0.5 },
-              ].map((tk) => (
-                <div
-                  key={tk.t}
-                  className="ticket w-full max-w-md flex items-stretch"
-                  style={{ "--fc": tk.color, "--rot": `${tk.rot}deg` } as React.CSSProperties}
-                >
-                  <div className="flex-1 flex items-center gap-4 px-5 py-4">
-                    <span className="text-2xl">{tk.emoji}</span>
-                    <div>
-                      <p className="text-base font-semibold leading-snug">{tk.t}</p>
-                      <p className="text-sm text-[#aebcca] mt-0.5">{tk.d}</p>
-                    </div>
+            <div className="py-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {[
+                  {
+                    label: "🎟 AUDIENCE",
+                    items: [
+                      { emoji: "💜", t: "아이돌 콘서트", d: "잠실 · 고척 · 월드투어 다수", type: "AUDIENCE", color: "#b02aff", rot: -2 },
+                      { emoji: "🎸", t: "밴드 · 록 콘서트", d: "홀 공연부터 스타디움까지", type: "AUDIENCE", color: "#2ad5ff", rot: 1.5 },
+                      { emoji: "🎪", t: "뮤직 페스티벌", d: "사운드베리 외 다수 관람", type: "AUDIENCE", color: "#2aff2a", rot: -1 },
+                    ],
+                  },
+                  {
+                    label: "🛠 STAFF",
+                    items: [
+                      { emoji: "🏃", t: "마라톤", d: "도심 대규모 러닝 행사 현장 운영", type: "STAFF", color: "#ffb02a", rot: 2 },
+                      { emoji: "⚽", t: "축구 경기", d: "수만 명 규모 관중 운영", type: "STAFF", color: "#ff2a2a", rot: -1.5 },
+                      { emoji: "🎆", t: "야외 축제", d: "축제 현장 운영 스태프", type: "STAFF", color: "#2a7fff", rot: 1 },
+                      { emoji: "🌳", t: "파크 콘서트", d: "공원 공연 현장 운영", type: "STAFF", color: "#ff2a7f", rot: -0.5 },
+                    ],
+                  },
+                ].map((col) => (
+                  <div key={col.label} className="flex flex-col">
+                    <p className="text-sm font-bold text-[#8fa0b0] tracking-[0.15em] mb-3 text-center">{col.label}</p>
+                    {col.items.map((tk) => (
+                      <div
+                        key={tk.t}
+                        className="ticket w-full flex items-stretch"
+                        style={{ "--fc": tk.color, "--rot": `${tk.rot}deg` } as React.CSSProperties}
+                      >
+                        <div className="flex-1 flex items-center gap-3 px-4 py-4">
+                          <span className="text-2xl">{tk.emoji}</span>
+                          <div>
+                            <p className="text-base font-semibold leading-snug">{tk.t}</p>
+                            <p className="text-sm text-[#aebcca] mt-0.5">{tk.d}</p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                  <div className="ticket-stub flex items-center px-4">
-                    <span className="text-[11px] font-semibold tracking-[0.15em]" style={{ color: tk.color }}>
-                      {tk.type}
-                    </span>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
 
               {/* 본업 — IP 팝업 티켓 (강조) */}
               <div
-                className="ticket ticket-main w-full max-w-md flex items-stretch"
+                className="ticket ticket-main w-full flex items-stretch mt-6"
                 style={{ "--fc": "#fffdf9", "--rot": "0deg" } as React.CSSProperties}
               >
                 <div className="flex-1 flex items-center gap-4 px-5 py-5">
