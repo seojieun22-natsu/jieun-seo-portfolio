@@ -141,15 +141,46 @@ export default function HybePortfolio() {
       {/* 02 On-site */}
       <section className="w-full py-28 px-8 md:px-16 border-t border-[#403f3f]">
         <div className="max-w-[1440px] mx-auto reveal-item">
-          <p className="text-xs text-[#6f879c] tracking-[0.02em] uppercase mb-3">02 — On-site Experience</p>
-          <h2 className="text-4xl md:text-6xl font-normal leading-[1.25] tracking-[-0.01em] mb-8">
-            관객의 눈,<br />운영자의 몸
-          </h2>
-          <p className="text-lg md:text-xl text-[#aebcca] max-w-2xl leading-[1.9] mb-16">
-            15살부터 음악과 K-POP을 사랑하며 수많은 공연과 이벤트를 경험했습니다.
-            보는 것에 그치지 않고 직접 현장에 들어가, 규모별 운영 프로세스가
-            실제로 어떻게 움직이는지 몸으로 익혔습니다.
-          </p>
+          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center mb-16">
+            <div>
+              <p className="text-xs text-[#6f879c] tracking-[0.02em] uppercase mb-3">02 — On-site Experience</p>
+              <h2 className="text-4xl md:text-6xl font-normal leading-[1.25] tracking-[-0.01em] mb-8">
+                관객의 눈,<br />운영자의 몸
+              </h2>
+              <p className="text-lg md:text-xl text-[#aebcca] max-w-2xl leading-[1.9]">
+                15살부터 음악과 K-POP을 사랑하며 수많은 공연과 이벤트를 경험했습니다.
+                보는 것에 그치지 않고 직접 현장에 들어가, 규모별 운영 프로세스가
+                실제로 어떻게 움직이는지 몸으로 익혔습니다.
+              </p>
+            </div>
+
+            {/* 시선 전환 다이어그램 */}
+            <div className="flex flex-col items-center">
+              {[
+                { emoji: "🎤", t: "관객", d: "무대 아래에서 보고, 느끼고, 분석하고", color: "#2ad5ff", delay: 0 },
+                { emoji: "🏟️", t: "스태프", d: "현장 안에서 규모별 운영을 몸으로 배우고", color: "#ffb02a", delay: 1.3 },
+                { emoji: "📋", t: "운영 총괄", d: "이제는 그 경험을 설계하는 사람으로", color: "#b02aff", delay: 2.6 },
+              ].map((n, i) => (
+                <div key={n.t} className="flex flex-col items-center w-full max-w-sm">
+                  {i > 0 && (
+                    <div className="flex flex-col items-center py-1">
+                      <div className="w-px h-7 bg-[#403f3f]" />
+                      <span className="text-[#6f879c] text-xs my-1">▼</span>
+                      <div className="w-px h-7 bg-[#403f3f]" />
+                    </div>
+                  )}
+                  <div
+                    className="flow-step rounded-[10px] bg-[#101010] px-6 py-5 w-full text-center"
+                    style={{ "--fc": n.color, animationDelay: `${n.delay}s` } as React.CSSProperties}
+                  >
+                    <p className="text-2xl mb-2">{n.emoji}</p>
+                    <p className="text-lg font-semibold mb-1">{n.t}</p>
+                    <p className="text-sm text-[#aebcca] leading-[1.7]">{n.d}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-px bg-[#403f3f] border border-[#403f3f]">
             {[
